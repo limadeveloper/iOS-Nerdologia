@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (3.4.0)
+  - FlowingMenu (1.0.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - FlowingMenu (~> 1.0.2)
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  FlowingMenu: 25d452dac11b109d73a63f7681446dcfc95192f2
+
+PODFILE CHECKSUM: d252eba8c343bf4b898d639e9bbf1c2a3c2abcaa
+
+COCOAPODS: 1.0.0

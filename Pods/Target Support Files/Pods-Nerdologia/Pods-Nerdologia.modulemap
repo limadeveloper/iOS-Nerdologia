@@ -1,0 +1,6 @@
+framework module Pods_Nerdologia {
+  umbrella header "Pods-Nerdologia-umbrella.h"
+
+  export *
+  module * { export * }
+}

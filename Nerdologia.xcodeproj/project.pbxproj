@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BA66D61765773C4D18EA356 /* Pods_Nerdologia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0C82565554A0AD197DD9DE /* Pods_Nerdologia.framework */; };
+		F103EAA91CF88DC200F20DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103EAA81CF88DC200F20DD3 /* AppDelegate.swift */; };
+		F103EAAB1CF88DC200F20DD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103EAAA1CF88DC200F20DD3 /* ViewController.swift */; };
+		F103EAAE1CF88DC200F20DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F103EAAC1CF88DC200F20DD3 /* Main.storyboard */; };
+		F103EAB01CF88DC200F20DD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F103EAAF1CF88DC200F20DD3 /* Assets.xcassets */; };
+		F103EAB31CF88DC200F20DD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F103EAB11CF88DC200F20DD3 /* LaunchScreen.storyboard */; };
+		F103EABB1CF88ED000F20DD3 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103EABA1CF88ED000F20DD3 /* Video.swift */; };
+		F103EABF1CF8907700F20DD3 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103EABE1CF8907700F20DD3 /* VideoModel.swift */; };
+		F103EAC11CF8BB0A00F20DD3 /* VideoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103EAC01CF8BB0A00F20DD3 /* VideoDetailViewController.swift */; };
+		F17399601CF944DD008DC799 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F173995F1CF944DD008DC799 /* MenuTableViewCell.swift */; };
+		F17399631CF94519008DC799 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17399621CF94519008DC799 /* MenuViewController.swift */; };
+		F17399651CF94A0D008DC799 /* PlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17399641CF94A0D008DC799 /* PlayList.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		06B06B67258F8050F3B906E8 /* Pods-Nerdologia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nerdologia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nerdologia/Pods-Nerdologia.release.xcconfig"; sourceTree = "<group>"; };
+		2B0C82565554A0AD197DD9DE /* Pods_Nerdologia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nerdologia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2F25ECF0519F078AEC1DF71 /* Pods-Nerdologia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nerdologia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nerdologia/Pods-Nerdologia.debug.xcconfig"; sourceTree = "<group>"; };
+		F103EAA51CF88DC100F20DD3 /* Nerdologia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nerdologia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F103EAA81CF88DC200F20DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F103EAAA1CF88DC200F20DD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F103EAAD1CF88DC200F20DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F103EAAF1CF88DC200F20DD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F103EAB21CF88DC200F20DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F103EAB41CF88DC200F20DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F103EABA1CF88ED000F20DD3 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Video.swift; path = Model/Video.swift; sourceTree = "<group>"; };
+		F103EABE1CF8907700F20DD3 /* VideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		F103EAC01CF8BB0A00F20DD3 /* VideoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoDetailViewController.swift; path = Controller/VideoDetailViewController.swift; sourceTree = "<group>"; };
+		F173995F1CF944DD008DC799 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewCell.swift; path = View/MenuTableViewCell.swift; sourceTree = "<group>"; };
+		F17399621CF94519008DC799 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Controller/MenuViewController.swift; sourceTree = "<group>"; };
+		F17399641CF94A0D008DC799 /* PlayList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayList.swift; path = Model/PlayList.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F103EAA21CF88DC100F20DD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BA66D61765773C4D18EA356 /* Pods_Nerdologia.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF7188705687233C6C0D9655 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2F25ECF0519F078AEC1DF71 /* Pods-Nerdologia.debug.xcconfig */,
+				06B06B67258F8050F3B906E8 /* Pods-Nerdologia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E07D112DADC7A06AB7EEA0E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B0C82565554A0AD197DD9DE /* Pods_Nerdologia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F103EA9C1CF88DC100F20DD3 = {
+			isa = PBXGroup;
+			children = (
+				F103EAA71CF88DC100F20DD3 /* YouTubePlayer */,
+				F103EAA61CF88DC100F20DD3 /* Products */,
+				AF7188705687233C6C0D9655 /* Pods */,
+				E07D112DADC7A06AB7EEA0E8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F103EAA61CF88DC100F20DD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F103EAA51CF88DC100F20DD3 /* Nerdologia.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F103EAA71CF88DC100F20DD3 /* YouTubePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				F103EABC1CF88EDA00F20DD3 /* Model */,
+				F17399611CF944E5008DC799 /* View */,
+				F103EAC21CF8BB7700F20DD3 /* Controller */,
+				F103EABD1CF88EE800F20DD3 /* Files */,
+			);
+			path = YouTubePlayer;
+			sourceTree = "<group>";
+		};
+		F103EABC1CF88EDA00F20DD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F103EABA1CF88ED000F20DD3 /* Video.swift */,
+				F17399641CF94A0D008DC799 /* PlayList.swift */,
+				F103EABE1CF8907700F20DD3 /* VideoModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F103EABD1CF88EE800F20DD3 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				F103EAA81CF88DC200F20DD3 /* AppDelegate.swift */,
+				F103EAB41CF88DC200F20DD3 /* Info.plist */,
+				F103EAB11CF88DC200F20DD3 /* LaunchScreen.storyboard */,
+				F103EAAF1CF88DC200F20DD3 /* Assets.xcassets */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
+		F103EAC21CF8BB7700F20DD3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F17399621CF94519008DC799 /* MenuViewController.swift */,
+				F103EAAA1CF88DC200F20DD3 /* ViewController.swift */,
+				F103EAC01CF8BB0A00F20DD3 /* VideoDetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F17399611CF944E5008DC799 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F173995F1CF944DD008DC799 /* MenuTableViewCell.swift */,
+				F103EAAC1CF88DC200F20DD3 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F103EAA41CF88DC100F20DD3 /* Nerdologia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F103EAB71CF88DC200F20DD3 /* Build configuration list for PBXNativeTarget "Nerdologia" */;
+			buildPhases = (
+				7D71055E61757798D766F685 /* 📦 Check Pods Manifest.lock */,
+				F103EAA11CF88DC100F20DD3 /* Sources */,
+				F103EAA21CF88DC100F20DD3 /* Frameworks */,
+				F103EAA31CF88DC100F20DD3 /* Resources */,
+				EF0AA7118A94AFCF8EA310B2 /* 📦 Embed Pods Frameworks */,
+				1F0562F718368CB5ADD16100 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nerdologia;
+			productName = YouTubePlayer;
+			productReference = F103EAA51CF88DC100F20DD3 /* Nerdologia.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F103EA9D1CF88DC100F20DD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "John Lima";
+				TargetAttributes = {
+					F103EAA41CF88DC100F20DD3 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = F103EAA01CF88DC100F20DD3 /* Build configuration list for PBXProject "Nerdologia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F103EA9C1CF88DC100F20DD3;
+			productRefGroup = F103EAA61CF88DC100F20DD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F103EAA41CF88DC100F20DD3 /* Nerdologia */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F103EAA31CF88DC100F20DD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F103EAB31CF88DC200F20DD3 /* LaunchScreen.storyboard in Resources */,
+				F103EAB01CF88DC200F20DD3 /* Assets.xcassets in Resources */,
+				F103EAAE1CF88DC200F20DD3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F0562F718368CB5ADD16100 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nerdologia/Pods-Nerdologia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D71055E61757798D766F685 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EF0AA7118A94AFCF8EA310B2 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nerdologia/Pods-Nerdologia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F103EAA11CF88DC100F20DD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F103EAAB1CF88DC200F20DD3 /* ViewController.swift in Sources */,
+				F103EABB1CF88ED000F20DD3 /* Video.swift in Sources */,
+				F17399601CF944DD008DC799 /* MenuTableViewCell.swift in Sources */,
+				F17399651CF94A0D008DC799 /* PlayList.swift in Sources */,
+				F17399631CF94519008DC799 /* MenuViewController.swift in Sources */,
+				F103EAA91CF88DC200F20DD3 /* AppDelegate.swift in Sources */,
+				F103EAC11CF8BB0A00F20DD3 /* VideoDetailViewController.swift in Sources */,
+				F103EABF1CF8907700F20DD3 /* VideoModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F103EAAC1CF88DC200F20DD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F103EAAD1CF88DC200F20DD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F103EAB11CF88DC200F20DD3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F103EAB21CF88DC200F20DD3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F103EAB51CF88DC200F20DD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F103EAB61CF88DC200F20DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F103EAB81CF88DC200F20DD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2F25ECF0519F078AEC1DF71 /* Pods-Nerdologia.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YouTubePlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.limadeveloper.YouTubePlayer;
+				PRODUCT_NAME = Nerdologia;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F103EAB91CF88DC200F20DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B06B67258F8050F3B906E8 /* Pods-Nerdologia.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YouTubePlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.limadeveloper.YouTubePlayer;
+				PRODUCT_NAME = Nerdologia;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F103EAA01CF88DC100F20DD3 /* Build configuration list for PBXProject "Nerdologia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F103EAB51CF88DC200F20DD3 /* Debug */,
+				F103EAB61CF88DC200F20DD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F103EAB71CF88DC200F20DD3 /* Build configuration list for PBXNativeTarget "Nerdologia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F103EAB81CF88DC200F20DD3 /* Debug */,
+				F103EAB91CF88DC200F20DD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F103EA9D1CF88DC100F20DD3 /* Project object */;
+}
