@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3BA66D61765773C4D18EA356 /* Pods_Nerdologia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0C82565554A0AD197DD9DE /* Pods_Nerdologia.framework */; };
+		8263587E1E13F032004F8421 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8263587D1E13F032004F8421 /* LaunchScreen.storyboard */; };
+		826358801E13F044004F8421 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8263587F1E13F044004F8421 /* Main.storyboard */; };
 		F103EAA91CF88DC200F20DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103EAA81CF88DC200F20DD3 /* AppDelegate.swift */; };
 		F103EAAB1CF88DC200F20DD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103EAAA1CF88DC200F20DD3 /* ViewController.swift */; };
-		F103EAAE1CF88DC200F20DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F103EAAC1CF88DC200F20DD3 /* Main.storyboard */; };
 		F103EAB01CF88DC200F20DD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F103EAAF1CF88DC200F20DD3 /* Assets.xcassets */; };
-		F103EAB31CF88DC200F20DD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F103EAB11CF88DC200F20DD3 /* LaunchScreen.storyboard */; };
 		F103EABB1CF88ED000F20DD3 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103EABA1CF88ED000F20DD3 /* Video.swift */; };
 		F103EABF1CF8907700F20DD3 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103EABE1CF8907700F20DD3 /* VideoModel.swift */; };
 		F103EAC11CF8BB0A00F20DD3 /* VideoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103EAC01CF8BB0A00F20DD3 /* VideoDetailViewController.swift */; };
@@ -24,13 +24,13 @@
 /* Begin PBXFileReference section */
 		06B06B67258F8050F3B906E8 /* Pods-Nerdologia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nerdologia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nerdologia/Pods-Nerdologia.release.xcconfig"; sourceTree = "<group>"; };
 		2B0C82565554A0AD197DD9DE /* Pods_Nerdologia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nerdologia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8263587D1E13F032004F8421 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8263587F1E13F044004F8421 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A2F25ECF0519F078AEC1DF71 /* Pods-Nerdologia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nerdologia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nerdologia/Pods-Nerdologia.debug.xcconfig"; sourceTree = "<group>"; };
 		F103EAA51CF88DC100F20DD3 /* Nerdologia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nerdologia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F103EAA81CF88DC200F20DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F103EAAA1CF88DC200F20DD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F103EAAD1CF88DC200F20DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F103EAAF1CF88DC200F20DD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F103EAB21CF88DC200F20DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F103EAB41CF88DC200F20DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F103EABA1CF88ED000F20DD3 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Video.swift; path = Model/Video.swift; sourceTree = "<group>"; };
 		F103EABE1CF8907700F20DD3 /* VideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
@@ -52,6 +52,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		826358811E13F04A004F8421 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8263587D1E13F032004F8421 /* LaunchScreen.storyboard */,
+				8263587F1E13F044004F8421 /* Main.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		AF7188705687233C6C0D9655 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +99,7 @@
 		F103EAA71CF88DC100F20DD3 /* Nerdologia */ = {
 			isa = PBXGroup;
 			children = (
+				826358811E13F04A004F8421 /* UI */,
 				F103EABC1CF88EDA00F20DD3 /* Model */,
 				F17399611CF944E5008DC799 /* View */,
 				F103EAC21CF8BB7700F20DD3 /* Controller */,
@@ -114,7 +124,6 @@
 			children = (
 				F103EAA81CF88DC200F20DD3 /* AppDelegate.swift */,
 				F103EAB41CF88DC200F20DD3 /* Info.plist */,
-				F103EAB11CF88DC200F20DD3 /* LaunchScreen.storyboard */,
 				F103EAAF1CF88DC200F20DD3 /* Assets.xcassets */,
 			);
 			name = Files;
@@ -134,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				F173995F1CF944DD008DC799 /* MenuTableViewCell.swift */,
-				F103EAAC1CF88DC200F20DD3 /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -201,9 +209,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F103EAB31CF88DC200F20DD3 /* LaunchScreen.storyboard in Resources */,
+				826358801E13F044004F8421 /* Main.storyboard in Resources */,
+				8263587E1E13F032004F8421 /* LaunchScreen.storyboard in Resources */,
 				F103EAB01CF88DC200F20DD3 /* Assets.xcassets in Resources */,
-				F103EAAE1CF88DC200F20DD3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,25 +282,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		F103EAAC1CF88DC200F20DD3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F103EAAD1CF88DC200F20DD3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F103EAB11CF88DC200F20DD3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F103EAB21CF88DC200F20DD3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F103EAB51CF88DC200F20DD3 /* Debug */ = {
@@ -389,7 +378,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A2F25ECF0519F078AEC1DF71 /* Pods-Nerdologia.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YouTubePlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -404,7 +393,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 06B06B67258F8050F3B906E8 /* Pods-Nerdologia.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YouTubePlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
