@@ -1,6 +1,6 @@
-# YouTube API Data
-- Swift 2.2
-- Xcode 7.3.1
-- iOS 9.3
+# Nerdologia - Youtube API
+- Swift 3
+- Xcode 8.2
+- iOS 10
 - Alamofire
 - FlowingMenu
