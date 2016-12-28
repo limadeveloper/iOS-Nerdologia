@@ -3,7 +3,7 @@
 //  Nerdologia
 //
 //  Created by John Lima on 5/28/16.
-//  Copyright © 2016 John Lima. All rights reserved.
+//  Copyright © 2016 limadeveloper. All rights reserved.
 //
 
 import UIKit

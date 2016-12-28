@@ -3,168 +3,137 @@
 //  YouTubePlayer
 //
 //  Created by John Lima on 5/27/16.
-//  Copyright © 2016 John Lima. All rights reserved.
+//  Copyright © 2016 limadeveloper. All rights reserved.
 //
 
 import UIKit
 import FlowingMenu
+import AlamofireImage
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, VideoModelDelegate, FlowingMenuDelegate {
     
     // MARK: - Properties
-    @IBOutlet var table: UITableView!
-    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
-    @IBOutlet var flowingMenuTransitionManager: FlowingMenuTransitionManager!
+    @IBOutlet fileprivate var tableView: UITableView!
+    @IBOutlet fileprivate var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet fileprivate var flowingMenuTransitionManager: FlowingMenuTransitionManager!
     
-    var videos: [Video] = [Video]()
-    let model: VideoModel = VideoModel()
-    var selectedVideo: Video?
-    
-    let presentSegueName = "PresentMenuSegue"
-    let dismissSegueName = "DismissMenuSegue"
-    let detailSegueName = "DetailSegue"
-    let cellName = "cell"
-    
-    var menu: UIViewController?
-    
-    var playListId: String = String()
+    fileprivate var videos = [Video]()
+    fileprivate let model = VideoModel()
+    fileprivate var selectedVideo: Video?
+    fileprivate let presentSegueName = "PresentMenuSegue"
+    fileprivate let dismissSegueName = "DismissMenuSegue"
+    fileprivate let detailSegueName = "DetailSegue"
+    fileprivate let cellName = "cell"
+    fileprivate var menu: UIViewController?
+    fileprivate var playListId = String()
 
     // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.flowingMenuTransitionManager.setInteractivePresentationView(view)
-        self.flowingMenuTransitionManager.delegate = self
+        flowingMenuTransitionManager.setInteractivePresentationView(view)
+        flowingMenuTransitionManager.delegate = self
         
-        self.table.delegate = self
-        self.table.dataSource = self
-        
-        self.model.delegate = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        model.delegate = self
         
         let back = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem = back
-        self.navigationController?.navigationBar.tintColor = UIColor.white
+        navigationItem.backBarButtonItem = back
+        navigationController?.navigationBar.tintColor = .white
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        print("view did appear")
-        
-        if let selectedPlayList = UserDefaults.standard.object(forKey: KeyPlayListId.Selected.rawValue) as? NSDictionary {
-            print("*** playList: \(selectedPlayList["id"])")
-            self.playListId = selectedPlayList["id"] as! String
-            self.model.getFeedVideos(playListId: self.playListId)
-            self.title = PlayList.getPlayList()[(selectedPlayList["index"] as! Int)-1].playlistName
-        }else {
-            print("playList default")
-            self.model.getFeedVideos(playListId: PlayList.getPlayList()[0].playListId)
-            self.title = PlayList.getPlayList()[0].playlistName
+        if let selectedPlayList = UserDefaults.standard.object(forKey: KeyPlayListId.Selected.rawValue) as? DictionaryType, let id = selectedPlayList[DictionaryKey.id.rawValue] as? String, let index = selectedPlayList[DictionaryKey.index.rawValue] as? Int {
+            playListId = id
+            model.getFeedVideos(playListId: playListId)
+            navigationItem.title = PlayList.getPlayList()[index-1].playlistName
+        }else if let id = PlayList.getPlayList().first?.playListId, let name = PlayList.getPlayList().first?.playlistName {
+            model.getFeedVideos(playListId: id)
+            navigationItem.title = name
         }
     }
     
     // MARK: - Actions
-    @IBAction func unwindToMainViewController(sender: UIStoryboardSegue) {
+    @IBAction fileprivate func unwindToMainViewController(sender: UIStoryboardSegue) {
         
     }
     
     // MARK: - VideoModel Delegate
     func dataReady() {
-        self.videos = self.model.videoArray
-        self.activityIndicatorView.stopAnimating()
-        self.table.reloadData()
+        videos = model.videoArray
+        activityIndicatorView.stopAnimating()
+        tableView.reloadData()
     }
     
     // MARK: - FlowingMenu Delegate
-    func colorOfElasticShapeInFlowingMenu(flowingMenu: FlowingMenuTransitionManager) -> UIColor? {
-        return UIColor(red: 31.0/255.0, green: 33.0/255.0, blue: 36.0/255.0, alpha: 1)
+    func colorOfElasticShapeInFlowingMenu(_ flowingMenu: FlowingMenuTransitionManager) -> UIColor? {
+        return UIColor(hexString: .first)
     }
     
-    func flowingMenuNeedsPresentMenu(flowingMenu: FlowingMenuTransitionManager) {
-        self.performSegueWithIdentifier(self.presentSegueName, sender: self)
+    func flowingMenuNeedsPresentMenu(_ flowingMenu: FlowingMenuTransitionManager) {
+        performSegue(withIdentifier: presentSegueName, sender: self)
     }
     
-    func flowingMenuNeedsDismissMenu(flowingMenu: FlowingMenuTransitionManager) {
-        print("dismiss menu")
-        self.menu?.performSegue(withIdentifier: self.dismissSegueName, sender: self)
+    func flowingMenuNeedsDismissMenu(_ flowingMenu: FlowingMenuTransitionManager) {
+        menu?.performSegue(withIdentifier: dismissSegueName, sender: self)
     }
 
     // MARK: - TableView DataSource
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.videos.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return videos.count
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let _ = self.videos[indexPath.row].videoThumbnailSize
-        let height: CGFloat = (self.view.frame.size.width / 480) * 344
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let _ = videos[indexPath.row].videoThumbnailSize
+        let height: CGFloat = (view.frame.size.width / 480) * 344
         return height
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.table.dequeueReusableCellWithIdentifier(self.cellName, forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let imageView = cell.viewWithTag(1) as! UIImageView
-        let backgroundImageView = cell.viewWithTag(3) as! UIImageView
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath)
         
-        imageView.image = nil
-        backgroundImageView.image = nil
+        let imageView = cell.viewWithTag(1) as? UIImageView
+        let backgroundImageView = cell.viewWithTag(3) as? UIImageView
+        let label = cell.viewWithTag(2) as? UILabel
+        
+        imageView?.image = nil
+        backgroundImageView?.image = nil
         
         let videoTitle = videos[indexPath.row].videoTitle
-        let label = cell.viewWithTag(2) as! UILabel
-        label.text = videoTitle
+        label?.text = videoTitle
         
-        let videoThumbnailUrlString = videos[indexPath.row].videoThumbnailUrl
-        let videoThumbnailUrl = URL(string: videoThumbnailUrlString)
-        
-        if videoThumbnailUrl != nil {
-            let request = URLRequest(url: videoThumbnailUrl!)
-            let session = URLSession.shared
-            let dataTask = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: NSError?) in
-                if let data = data {
-                    DispatchQueue.main.async(execute: {
-                        imageView.image = UIImage(data: data)
-                        backgroundImageView.image = UIImage(data: data)
-                    })
-                }
-            })
-            dataTask.resume()
+        if let videoThumbnailUrlString = videos[indexPath.row].videoThumbnailUrl, let videoThumbnailUrl = URL(string: videoThumbnailUrlString) {
+            imageView?.af_setImage(withURL: videoThumbnailUrl)
+            backgroundImageView?.af_setImage(withURL: videoThumbnailUrl)
         }
         
         return cell
     }
 
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        self.selectedVideo = self.videos[indexPath.row]
-        self.performSegue(withIdentifier: self.detailSegueName, sender: self)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedVideo = videos[indexPath.row]
+        performSegue(withIdentifier: detailSegueName, sender: self)
     }
     
     // MARK: - Navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == self.detailSegueName {
-            
-            let controller = segue.destination as! VideoDetailViewController
-            
-            controller.selectedVideo = self.selectedVideo
-            
-        }else if segue.identifier == self.presentSegueName {
-            
-            let controller = segue.destination
-            
-            controller.transitioningDelegate = self.flowingMenuTransitionManager
-            
-            self.flowingMenuTransitionManager.setInteractiveDismissView(controller.view)
-            self.menu = controller
-            
-            print("present menu")
-            
-            /*self.playListId = ""
-            NSUserDefaults.standardUserDefaults().removeObjectForKey(KeyPlayListId.Selected.rawValue)
-            NSUserDefaults.standardUserDefaults().synchronize()
-            
-            self.videos = []
-            self.activityIndicatorView.startAnimating()
-            self.table.reloadData()*/
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+            case detailSegueName:
+                let controller = segue.destination as? VideoDetailViewController
+                controller?.selectedVideo = selectedVideo
+            case presentSegueName:
+                let controller = segue.destination
+                controller.transitioningDelegate = flowingMenuTransitionManager
+                flowingMenuTransitionManager.setInteractiveDismissView(controller.view)
+                menu = controller
+            default:
+                break
+            }
         }
     }
 }

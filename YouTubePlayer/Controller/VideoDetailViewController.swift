@@ -3,59 +3,62 @@
 //  YouTubePlayer
 //
 //  Created by John Lima on 5/27/16.
-//  Copyright © 2016 John Lima. All rights reserved.
+//  Copyright © 2016 limadeveloper. All rights reserved.
 //
 
 import UIKit
 
 class VideoDetailViewController: UIViewController, UIWebViewDelegate {
 
-    @IBOutlet var webView: UIWebView!
-    @IBOutlet var videoTitle: UILabel!
-    @IBOutlet var videoDescription: UITextView!
-    @IBOutlet weak var heightConstraintWebView: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var webView: UIWebView!
+    @IBOutlet fileprivate weak var videoTitle: UILabel!
+    @IBOutlet fileprivate weak var videoDescription: UITextView!
+    @IBOutlet fileprivate weak var heightConstraintWebView: NSLayoutConstraint!
+    
+    fileprivate let videoModel = VideoModel()
     
     var selectedVideo: Video?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.automaticallyAdjustsScrollViewInsets = false
+        automaticallyAdjustsScrollViewInsets = false
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.heightConstraintWebView.constant = 0
+        heightConstraintWebView.constant = 0
     }
     
-    override func viewDidAppear(animated: Bool) {
-        if let video = self.selectedVideo {
+    override func viewDidAppear(_ animated: Bool) {
+        if let video = selectedVideo {
             
-            self.videoTitle.text = video.videoTitle
-            self.videoDescription.text = video.videoDescription
+            videoTitle.text = video.videoTitle
+            videoDescription.text = video.videoDescription
             
-            self.setupWebView(video.videoId)
+            setupWebView(videoId: video.videoId)
         }
     }
     
-    func setupWebView(videoId: String) {
+    fileprivate func setupWebView(videoId: String?) {
         
-        self.webView.isOpaque = false
-        self.webView.backgroundColor = UIColor.clear
-        self.webView.scrollView.isScrollEnabled = false
+        webView.isOpaque = false
+        webView.backgroundColor = .clear
+        webView.scrollView.isScrollEnabled = false
         
-        let width = self.view.frame.size.width
+        let width = view.frame.size.width
         let height = (width/320) * 180
         
         self.heightConstraintWebView.constant = height
         
-        let stringUrl = "http://www.youtube.com/embed/\(videoId)?showinfo=0&modestbranding=1&frameborder=0&rel=0"
+        guard let videoId = videoId else { return }
+        let stringUrl = videoModel.getInfoVideoUrlBy(id: videoId)
         
-        let url = URL(string: stringUrl)!
+        guard let url = URL(string: stringUrl) else { return }
         let request: URLRequest = URLRequest(url: url)
         
-        self.webView.loadRequest(request)
+        webView.loadRequest(request)
     }
 
 }

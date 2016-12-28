@@ -11,6 +11,7 @@ target 'Nerdologia' do
     pod 'Cent'
     pod 'Alamofire'
   	pod 'FlowingMenu'
+    pod 'AlamofireImage'
   	
 end
 

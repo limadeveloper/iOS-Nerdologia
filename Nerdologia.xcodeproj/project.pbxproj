@@ -10,6 +10,9 @@
 		3BA66D61765773C4D18EA356 /* Pods_Nerdologia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0C82565554A0AD197DD9DE /* Pods_Nerdologia.framework */; };
 		8263587E1E13F032004F8421 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8263587D1E13F032004F8421 /* LaunchScreen.storyboard */; };
 		826358801E13F044004F8421 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8263587F1E13F044004F8421 /* Main.storyboard */; };
+		826358831E14391F004F8421 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826358821E14391F004F8421 /* Extensions.swift */; };
+		826358851E143968004F8421 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826358841E143968004F8421 /* Constants.swift */; };
+		826358871E1450B5004F8421 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826358861E1450B5004F8421 /* Global.swift */; };
 		F103EAA91CF88DC200F20DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103EAA81CF88DC200F20DD3 /* AppDelegate.swift */; };
 		F103EAAB1CF88DC200F20DD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103EAAA1CF88DC200F20DD3 /* ViewController.swift */; };
 		F103EAB01CF88DC200F20DD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F103EAAF1CF88DC200F20DD3 /* Assets.xcassets */; };
@@ -26,6 +29,9 @@
 		2B0C82565554A0AD197DD9DE /* Pods_Nerdologia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nerdologia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8263587D1E13F032004F8421 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8263587F1E13F044004F8421 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		826358821E14391F004F8421 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		826358841E143968004F8421 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		826358861E1450B5004F8421 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		A2F25ECF0519F078AEC1DF71 /* Pods-Nerdologia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nerdologia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nerdologia/Pods-Nerdologia.debug.xcconfig"; sourceTree = "<group>"; };
 		F103EAA51CF88DC100F20DD3 /* Nerdologia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nerdologia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F103EAA81CF88DC200F20DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				F103EAA81CF88DC200F20DD3 /* AppDelegate.swift */,
+				826358821E14391F004F8421 /* Extensions.swift */,
+				826358841E143968004F8421 /* Constants.swift */,
+				826358861E1450B5004F8421 /* Global.swift */,
 				F103EAB41CF88DC200F20DD3 /* Info.plist */,
 				F103EAAF1CF88DC200F20DD3 /* Assets.xcassets */,
 			);
@@ -178,7 +187,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = "John Lima";
+				ORGANIZATIONNAME = limadeveloper;
 				TargetAttributes = {
 					F103EAA41CF88DC100F20DD3 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -271,9 +280,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F103EAAB1CF88DC200F20DD3 /* ViewController.swift in Sources */,
+				826358831E14391F004F8421 /* Extensions.swift in Sources */,
 				F103EABB1CF88ED000F20DD3 /* Video.swift in Sources */,
 				F17399601CF944DD008DC799 /* MenuTableViewCell.swift in Sources */,
 				F17399651CF94A0D008DC799 /* PlayList.swift in Sources */,
+				826358851E143968004F8421 /* Constants.swift in Sources */,
+				826358871E1450B5004F8421 /* Global.swift in Sources */,
 				F17399631CF94519008DC799 /* MenuViewController.swift in Sources */,
 				F103EAA91CF88DC200F20DD3 /* AppDelegate.swift in Sources */,
 				F103EAC11CF8BB0A00F20DD3 /* VideoDetailViewController.swift in Sources */,
