@@ -35,20 +35,28 @@ extension FlowingMenuTransitionManager: UIViewControllerAnimatedTransitioning {
    Tells your animator object to perform the transition animations.
 
    The context object containing information about the transition.
-  */
-  public func animateTransition(context: UIViewControllerContextTransitioning) {
-    let fromVC = context.viewControllerForKey(UITransitionContextFromViewControllerKey)!
-    let toVC   = context.viewControllerForKey(UITransitionContextToViewControllerKey)!
+   */
+  public func animateTransition(using context: UIViewControllerContextTransitioning) {
+    let fromVC = context.viewController(forKey: .from)
+    let toVC   = context.viewController(forKey: .to)
 
-    let containerView = context.containerView()!
-    let menuView      = animationMode == .Presentation ? toVC.view : fromVC.view
-    let otherView     = animationMode == .Presentation ? fromVC.view : toVC.view
+    let containerView = context.containerView
+    let menuView      = animationMode == .presentation ? toVC?.view : fromVC?.view
+    let otherView     = animationMode == .presentation ? fromVC?.view : toVC?.view
 
-    let action = animationMode == .Presentation ? presentMenu : dismissMenu
+    let action = animationMode == .presentation ? presentMenu : dismissMenu
     let status = FlowingMenuTransitionStatus(context: context)
 
-    action(menuView, otherView: otherView, containerView: containerView, status: status, duration: transitionDuration(context)) {
-      context.completeTransition(!context.transitionWasCancelled())
+    action(menuView!, otherView!, containerView, status, transitionDuration(using: context)) {
+      let canceled = context.transitionWasCancelled
+
+      context.completeTransition(!canceled)
+
+      if (!canceled) {
+        if self.animationMode == .presentation {
+          UIApplication.shared.keyWindow?.insertSubview(fromVC!.view, at:0)
+        }
+      }
     }
   }
 
@@ -57,8 +65,8 @@ extension FlowingMenuTransitionManager: UIViewControllerAnimatedTransitioning {
    animation.
 
    The context object containing information to use during the transition.
-  */
-  public func transitionDuration(context: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+   */
+  public func transitionDuration(using context: UIViewControllerContextTransitioning?) -> TimeInterval {
     return interactive ? 0.6 : 0.2
   }
 }

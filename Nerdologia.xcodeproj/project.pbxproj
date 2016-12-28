@@ -72,7 +72,7 @@
 		F103EA9C1CF88DC100F20DD3 = {
 			isa = PBXGroup;
 			children = (
-				F103EAA71CF88DC100F20DD3 /* YouTubePlayer */,
+				F103EAA71CF88DC100F20DD3 /* Nerdologia */,
 				F103EAA61CF88DC100F20DD3 /* Products */,
 				AF7188705687233C6C0D9655 /* Pods */,
 				E07D112DADC7A06AB7EEA0E8 /* Frameworks */,
@@ -87,7 +87,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F103EAA71CF88DC100F20DD3 /* YouTubePlayer */ = {
+		F103EAA71CF88DC100F20DD3 /* Nerdologia */ = {
 			isa = PBXGroup;
 			children = (
 				F103EABC1CF88EDA00F20DD3 /* Model */,
@@ -95,6 +95,7 @@
 				F103EAC21CF8BB7700F20DD3 /* Controller */,
 				F103EABD1CF88EE800F20DD3 /* Files */,
 			);
+			name = Nerdologia;
 			path = YouTubePlayer;
 			sourceTree = "<group>";
 		};
@@ -145,12 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F103EAB71CF88DC200F20DD3 /* Build configuration list for PBXNativeTarget "Nerdologia" */;
 			buildPhases = (
-				7D71055E61757798D766F685 /* 📦 Check Pods Manifest.lock */,
+				7D71055E61757798D766F685 /* [CP] Check Pods Manifest.lock */,
 				F103EAA11CF88DC100F20DD3 /* Sources */,
 				F103EAA21CF88DC100F20DD3 /* Frameworks */,
 				F103EAA31CF88DC100F20DD3 /* Resources */,
-				EF0AA7118A94AFCF8EA310B2 /* 📦 Embed Pods Frameworks */,
-				1F0562F718368CB5ADD16100 /* 📦 Copy Pods Resources */,
+				EF0AA7118A94AFCF8EA310B2 /* [CP] Embed Pods Frameworks */,
+				1F0562F718368CB5ADD16100 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,11 +169,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "John Lima";
 				TargetAttributes = {
 					F103EAA41CF88DC100F20DD3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -208,14 +210,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1F0562F718368CB5ADD16100 /* 📦 Copy Pods Resources */ = {
+		1F0562F718368CB5ADD16100 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,29 +225,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nerdologia/Pods-Nerdologia-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7D71055E61757798D766F685 /* 📦 Check Pods Manifest.lock */ = {
+		7D71055E61757798D766F685 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EF0AA7118A94AFCF8EA310B2 /* 📦 Embed Pods Frameworks */ = {
+		EF0AA7118A94AFCF8EA310B2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,8 +309,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -353,8 +357,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -373,6 +379,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -382,11 +389,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A2F25ECF0519F078AEC1DF71 /* Pods-Nerdologia.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YouTubePlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.limadeveloper.YouTubePlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.limadeveloper.nerdologia;
 				PRODUCT_NAME = Nerdologia;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -395,11 +404,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 06B06B67258F8050F3B906E8 /* Pods-Nerdologia.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YouTubePlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.limadeveloper.YouTubePlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.limadeveloper.nerdologia;
 				PRODUCT_NAME = Nerdologia;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -12,8 +12,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var tableView: UITableView!
     
-    private let cellName = "MenuCell"
-    private let playLists = PlayList.getPlayList()
+    fileprivate let cellName = "MenuCell"
+    fileprivate let playLists = PlayList.getPlayList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +44,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let id: String = playList.playListId
         let selectedPlayList: NSDictionary = ["index": index, "id": id]
         
-        NSUserDefaults.standardUserDefaults().setObject(selectedPlayList, forKey: KeyPlayListId.Selected.rawValue)
-        NSUserDefaults.standardUserDefaults().synchronize()
+        UserDefaults.standard.set(selectedPlayList, forKey: KeyPlayListId.Selected.rawValue)
+        UserDefaults.standard.synchronize()
         
     }
 

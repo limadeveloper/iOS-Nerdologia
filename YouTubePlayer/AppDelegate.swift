@@ -16,15 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        UIApplication.shared.statusBarStyle = .lightContent
         
         return true
     }
     
     func applicationDidEnterBackground(application: UIApplication) {
         print("app did enter background")
-        NSUserDefaults.standardUserDefaults().removeObjectForKey(KeyPlayListId.Selected.rawValue)
-        NSUserDefaults.standardUserDefaults().synchronize()
+        UserDefaults.standard.removeObject(forKey: KeyPlayListId.Selected.rawValue)
+        UserDefaults.standard.synchronize()
     }
 
 }

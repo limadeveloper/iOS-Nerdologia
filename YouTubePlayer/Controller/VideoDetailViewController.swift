@@ -41,9 +41,9 @@ class VideoDetailViewController: UIViewController, UIWebViewDelegate {
     
     func setupWebView(videoId: String) {
         
-        self.webView.opaque = false
-        self.webView.backgroundColor = UIColor.clearColor()
-        self.webView.scrollView.scrollEnabled = false
+        self.webView.isOpaque = false
+        self.webView.backgroundColor = UIColor.clear
+        self.webView.scrollView.isScrollEnabled = false
         
         let width = self.view.frame.size.width
         let height = (width/320) * 180
@@ -52,8 +52,8 @@ class VideoDetailViewController: UIViewController, UIWebViewDelegate {
         
         let stringUrl = "http://www.youtube.com/embed/\(videoId)?showinfo=0&modestbranding=1&frameborder=0&rel=0"
         
-        let url = NSURL(string: stringUrl)!
-        let request: NSURLRequest = NSURLRequest(URL: url)
+        let url = URL(string: stringUrl)!
+        let request: URLRequest = URLRequest(url: url)
         
         self.webView.loadRequest(request)
     }

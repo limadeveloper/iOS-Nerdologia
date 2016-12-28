@@ -41,17 +41,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.model.delegate = self
         
-        let back = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        let back = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationItem.backBarButtonItem = back
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         print("view did appear")
         
-        if let selectedPlayList = NSUserDefaults.standardUserDefaults().objectForKey(KeyPlayListId.Selected.rawValue) as? NSDictionary {
+        if let selectedPlayList = UserDefaults.standard.object(forKey: KeyPlayListId.Selected.rawValue) as? NSDictionary {
             print("*** playList: \(selectedPlayList["id"])")
             self.playListId = selectedPlayList["id"] as! String
             self.model.getFeedVideos(playListId: self.playListId)
@@ -86,7 +86,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func flowingMenuNeedsDismissMenu(flowingMenu: FlowingMenuTransitionManager) {
         print("dismiss menu")
-        self.menu?.performSegueWithIdentifier(self.dismissSegueName, sender: self)
+        self.menu?.performSegue(withIdentifier: self.dismissSegueName, sender: self)
     }
 
     // MARK: - TableView DataSource
@@ -114,14 +114,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         label.text = videoTitle
         
         let videoThumbnailUrlString = videos[indexPath.row].videoThumbnailUrl
-        let videoThumbnailUrl = NSURL(string: videoThumbnailUrlString)
+        let videoThumbnailUrl = URL(string: videoThumbnailUrlString)
         
         if videoThumbnailUrl != nil {
-            let request = NSURLRequest(URL: videoThumbnailUrl!)
-            let session = NSURLSession.sharedSession()
-            let dataTask = session.dataTaskWithRequest(request, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) in
+            let request = URLRequest(url: videoThumbnailUrl!)
+            let session = URLSession.shared
+            let dataTask = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: NSError?) in
                 if let data = data {
-                    dispatch_async(dispatch_get_main_queue(), {
+                    DispatchQueue.main.async(execute: {
                         imageView.image = UIImage(data: data)
                         backgroundImageView.image = UIImage(data: data)
                     })
@@ -136,20 +136,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         self.selectedVideo = self.videos[indexPath.row]
-        self.performSegueWithIdentifier(self.detailSegueName, sender: self)
+        self.performSegue(withIdentifier: self.detailSegueName, sender: self)
     }
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == self.detailSegueName {
             
-            let controller = segue.destinationViewController as! VideoDetailViewController
+            let controller = segue.destination as! VideoDetailViewController
             
             controller.selectedVideo = self.selectedVideo
             
         }else if segue.identifier == self.presentSegueName {
             
-            let controller = segue.destinationViewController
+            let controller = segue.destination
             
             controller.transitioningDelegate = self.flowingMenuTransitionManager
             
