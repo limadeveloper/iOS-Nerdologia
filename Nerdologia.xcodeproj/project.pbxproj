@@ -42,12 +42,12 @@
 		F103EAAA1CF88DC200F20DD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F103EAAF1CF88DC200F20DD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F103EAB41CF88DC200F20DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F103EABA1CF88ED000F20DD3 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Video.swift; path = Model/Video.swift; sourceTree = "<group>"; };
+		F103EABA1CF88ED000F20DD3 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		F103EABE1CF8907700F20DD3 /* VideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
-		F103EAC01CF8BB0A00F20DD3 /* VideoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoDetailViewController.swift; path = Controller/VideoDetailViewController.swift; sourceTree = "<group>"; };
-		F173995F1CF944DD008DC799 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewCell.swift; path = View/MenuTableViewCell.swift; sourceTree = "<group>"; };
-		F17399621CF94519008DC799 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Controller/MenuViewController.swift; sourceTree = "<group>"; };
-		F17399641CF94A0D008DC799 /* PlayList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayList.swift; path = Model/PlayList.swift; sourceTree = "<group>"; };
+		F103EAC01CF8BB0A00F20DD3 /* VideoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDetailViewController.swift; sourceTree = "<group>"; };
+		F173995F1CF944DD008DC799 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		F17399621CF94519008DC799 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F17399641CF94A0D008DC799 /* PlayList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 				8263587D1E13F032004F8421 /* LaunchScreen.storyboard */,
 				8263587F1E13F044004F8421 /* Main.storyboard */,
 			);
-			name = UI;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		AF7188705687233C6C0D9655 /* Pods */ = {
@@ -91,10 +91,10 @@
 		F103EA9C1CF88DC100F20DD3 = {
 			isa = PBXGroup;
 			children = (
-				F103EAA71CF88DC100F20DD3 /* Nerdologia */,
-				F103EAA61CF88DC100F20DD3 /* Products */,
-				AF7188705687233C6C0D9655 /* Pods */,
 				E07D112DADC7A06AB7EEA0E8 /* Frameworks */,
+				F103EAA71CF88DC100F20DD3 /* Nerdologia */,
+				AF7188705687233C6C0D9655 /* Pods */,
+				F103EAA61CF88DC100F20DD3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,51 +115,50 @@
 				F103EAC21CF8BB7700F20DD3 /* Controller */,
 				F103EABD1CF88EE800F20DD3 /* Files */,
 			);
-			name = Nerdologia;
-			path = YouTubePlayer;
+			path = Nerdologia;
 			sourceTree = "<group>";
 		};
 		F103EABC1CF88EDA00F20DD3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F103EABA1CF88ED000F20DD3 /* Video.swift */,
 				F17399641CF94A0D008DC799 /* PlayList.swift */,
+				F103EABA1CF88ED000F20DD3 /* Video.swift */,
 				F103EABE1CF8907700F20DD3 /* VideoModel.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F103EABD1CF88EE800F20DD3 /* Files */ = {
 			isa = PBXGroup;
 			children = (
 				F103EAA81CF88DC200F20DD3 /* AppDelegate.swift */,
-				826358821E14391F004F8421 /* Extensions.swift */,
 				826358841E143968004F8421 /* Constants.swift */,
+				826358821E14391F004F8421 /* Extensions.swift */,
 				826358861E1450B5004F8421 /* Global.swift */,
 				F103EAB41CF88DC200F20DD3 /* Info.plist */,
 				F103EAAF1CF88DC200F20DD3 /* Assets.xcassets */,
 			);
-			name = Files;
+			path = Files;
 			sourceTree = "<group>";
 		};
 		F103EAC21CF8BB7700F20DD3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				F17399621CF94519008DC799 /* MenuViewController.swift */,
-				F103EAAA1CF88DC200F20DD3 /* ViewController.swift */,
 				F103EAC01CF8BB0A00F20DD3 /* VideoDetailViewController.swift */,
+				F103EAAA1CF88DC200F20DD3 /* ViewController.swift */,
 			);
-			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		F17399611CF944E5008DC799 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F173995F1CF944DD008DC799 /* MenuTableViewCell.swift */,
-				8253FACE1E22AFF100FD729D /* GridFlowLayout.swift */,
 				8253FAD01E22D7F100FD729D /* CustomLabel.swift */,
+				8253FACE1E22AFF100FD729D /* GridFlowLayout.swift */,
+				F173995F1CF944DD008DC799 /* MenuTableViewCell.swift */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,7 +400,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = YouTubePlayer/Info.plist;
+				INFOPLIST_FILE = Nerdologia/Files/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.limadeveloper.nerdologia;
 				PRODUCT_NAME = Nerdologia;
@@ -417,7 +416,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = YouTubePlayer/Info.plist;
+				INFOPLIST_FILE = Nerdologia/Files/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.limadeveloper.nerdologia;
 				PRODUCT_NAME = Nerdologia;
