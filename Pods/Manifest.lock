@@ -8,6 +8,7 @@ PODS:
   - FlowingMenu (2.0.1)
   - MBProgressHUD (1.0.0)
   - Reachability (3.2)
+  - ResizableCollectionView (1.0.7)
 
 DEPENDENCIES:
   - Alamofire
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - FlowingMenu
   - MBProgressHUD
   - Reachability
+  - ResizableCollectionView
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
@@ -25,7 +27,8 @@ SPEC CHECKSUMS:
   FlowingMenu: '097789ea7fcec5c94edd58765e00e27b31e62cf5'
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  ResizableCollectionView: 618b0176e49e7a08535b2b8d521268319af0043d
 
-PODFILE CHECKSUM: 197770c38804ec058a9d72305c51696e6c44bc9d
+PODFILE CHECKSUM: bcb8ac8475c543758daa6470854ad025091a699f
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.2.0.beta.3
