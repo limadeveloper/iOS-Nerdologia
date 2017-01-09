@@ -1,6 +1,6 @@
 //
 //  Video.swift
-//  YouTubePlayer
+//  Nerdologia
 //
 //  Created by John Lima on 5/27/16.
 //  Copyright © 2016 limadeveloper. All rights reserved.

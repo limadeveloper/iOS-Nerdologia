@@ -1,28 +1,36 @@
 //
 //  VideoDetailViewController.swift
-//  YouTubePlayer
+//  Nerdologia
 //
 //  Created by John Lima on 5/27/16.
 //  Copyright © 2016 limadeveloper. All rights reserved.
 //
 
 import UIKit
+import AlamofireImage
 
 class VideoDetailViewController: UIViewController, UIWebViewDelegate {
 
+    // MARK - Properties
     @IBOutlet fileprivate weak var webView: UIWebView!
     @IBOutlet fileprivate weak var videoTitle: UILabel!
     @IBOutlet fileprivate weak var videoDescription: UITextView!
     @IBOutlet fileprivate weak var heightConstraintWebView: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var imageViewBackgroundNavigation: UIImageView!
     
     fileprivate let videoModel = VideoModel()
     
     var selectedVideo: Video?
     
+    // MARK - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         automaticallyAdjustsScrollViewInsets = false
+        
+        if let videoThumbnailUrlString = selectedVideo?.videoThumbnailUrl, let videoThumbnailUrl = URL(string: videoThumbnailUrlString) {
+            imageViewBackgroundNavigation.af_setImage(withURL: videoThumbnailUrl)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +47,11 @@ class VideoDetailViewController: UIViewController, UIWebViewDelegate {
             
             setupWebView(videoId: video.videoId)
         }
+    }
+    
+    // MARK - Actions
+    @IBAction fileprivate func done() {
+        dismiss(animated: true, completion: nil)
     }
     
     fileprivate func setupWebView(videoId: String?) {

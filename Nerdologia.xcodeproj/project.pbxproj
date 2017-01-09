@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3BA66D61765773C4D18EA356 /* Pods_Nerdologia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0C82565554A0AD197DD9DE /* Pods_Nerdologia.framework */; };
+		8253FACF1E22AFF100FD729D /* GridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8253FACE1E22AFF100FD729D /* GridFlowLayout.swift */; };
+		8253FAD11E22D7F100FD729D /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8253FAD01E22D7F100FD729D /* CustomLabel.swift */; };
 		8263587E1E13F032004F8421 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8263587D1E13F032004F8421 /* LaunchScreen.storyboard */; };
 		826358801E13F044004F8421 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8263587F1E13F044004F8421 /* Main.storyboard */; };
 		826358831E14391F004F8421 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826358821E14391F004F8421 /* Extensions.swift */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		06B06B67258F8050F3B906E8 /* Pods-Nerdologia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nerdologia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nerdologia/Pods-Nerdologia.release.xcconfig"; sourceTree = "<group>"; };
 		2B0C82565554A0AD197DD9DE /* Pods_Nerdologia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nerdologia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8253FACE1E22AFF100FD729D /* GridFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridFlowLayout.swift; sourceTree = "<group>"; };
+		8253FAD01E22D7F100FD729D /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		8263587D1E13F032004F8421 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8263587F1E13F044004F8421 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		826358821E14391F004F8421 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				F173995F1CF944DD008DC799 /* MenuTableViewCell.swift */,
+				8253FACE1E22AFF100FD729D /* GridFlowLayout.swift */,
+				8253FAD01E22D7F100FD729D /* CustomLabel.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -191,6 +197,7 @@
 				TargetAttributes = {
 					F103EAA41CF88DC100F20DD3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = G9572JBENB;
 						LastSwiftMigration = 0820;
 					};
 				};
@@ -282,11 +289,13 @@
 				F103EAAB1CF88DC200F20DD3 /* ViewController.swift in Sources */,
 				826358831E14391F004F8421 /* Extensions.swift in Sources */,
 				F103EABB1CF88ED000F20DD3 /* Video.swift in Sources */,
+				8253FACF1E22AFF100FD729D /* GridFlowLayout.swift in Sources */,
 				F17399601CF944DD008DC799 /* MenuTableViewCell.swift in Sources */,
 				F17399651CF94A0D008DC799 /* PlayList.swift in Sources */,
 				826358851E143968004F8421 /* Constants.swift in Sources */,
 				826358871E1450B5004F8421 /* Global.swift in Sources */,
 				F17399631CF94519008DC799 /* MenuViewController.swift in Sources */,
+				8253FAD11E22D7F100FD729D /* CustomLabel.swift in Sources */,
 				F103EAA91CF88DC200F20DD3 /* AppDelegate.swift in Sources */,
 				F103EAC11CF8BB0A00F20DD3 /* VideoDetailViewController.swift in Sources */,
 				F103EABF1CF8907700F20DD3 /* VideoModel.swift in Sources */,
@@ -392,6 +401,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G9572JBENB;
 				INFOPLIST_FILE = YouTubePlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.limadeveloper.nerdologia;
@@ -407,6 +417,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G9572JBENB;
 				INFOPLIST_FILE = YouTubePlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.limadeveloper.nerdologia;
